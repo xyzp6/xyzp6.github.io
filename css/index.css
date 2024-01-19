@@ -1,226 +1,380 @@
-@charset "utf-8";
- 
-/* 统一板块宽度和左右居中 */
- 
-.banner_con,
-.news_con,
-.case_con,
-.links_con,
-.footer_con {
-    width: 1002px;
-    margin: 0 auto;
+/*
+首页
+ */
+#index {
+    display: flex;
 }
- 
-#banner {
-    height: 465px;
-    background: gray url("../images/banner1_02_02.jpg") no-repeat center;
+/* 左侧 */
+.index_text p {
+    color: gray;
 }
- 
-#banner .banner_con {
-    height: 465px;
-    /* background: pink; */
-    margin: 0 auto;
+
+.index_text h1 {
+    color: black;
 }
- 
-.news_con {
-    height: 243px;
-    background: white;
+
+.index_text h3 {
+    color: #0066ff;
 }
- 
-.news_title {
-    /* background: cadetblue; */
-    font-size: 18px;
-    color: #3f434f;
-    line-height: 18px;
-    padding-top: 36px;
+
+.index_text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 50px;
 }
- 
-.news_list {
-    /* background: cornflowerblue; */
-    margin-top: 23px;
+/*.text {*/
+/*    flex: 1;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+/* 右侧 */
+.main_card {
+    width: 380px;
+    height: 508px;
+    background: rgba(211, 211, 211, 0.199);
+    position: absolute;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.3);
 }
- 
-.news_list li {
-    width: 437px;
-    height: 25px;
-    background: url("../images/ico_05.jpg") no-repeat left;
-    padding-left: 14px;
-    /* margin-top: 23px;不能给li加哦 要给他爹，不然每个儿子顶部都会空出来*/
+
+#c1 {
+    width: 380px;
+    height: 508px;
+    background-image: url(../images/jh1.jpg);
+    background-size: cover;
+    background-position: center;
 }
- 
-.news_list li a {
-    float: left;
-    font-size: 12px;
-    color: #565656;
-    line-height: 25px;
+
+#c2 {
+    width: 380px;
+    height: 508px;
+    background-image: url(../images/jh2.jpg);
+    background-size: cover;
+    background-position: center;
 }
- 
-.news_list li span {
-    float: right;
-    color: #9a9a9a;
-    font-size: 12px;
+
+#c3 {
+    width: 380px;
+    height: 508px;
+    background-image: url(../images/jh3.jpg);
+    background-size: cover;
+    background-position: center;
 }
- 
-.news_l {
-    width: 480px;
-    height: 243px;
-    /* background: rebeccapurple; */
-    float: left;
-    padding-left: 21px;
+
+#c4 {
+    width: 380px;
+    height: 508px;
+    background-image: url(../images/jh4.jpg);
+    background-size: cover;
+    background-position: center;
 }
- 
-.news_c {
-    width: 194px;
-    height: 243px;
-    background: #f1f1f1;
-    float: left;
-    padding: 0 27px 0 20px;
+
+.main:hover #c1 {
+    transform: translateX(-100px) rotate(-40deg);
 }
- 
-.news_c .txt1 {
-    font-size: 12px;
-    color: #555555;
-    line-height: 25px;
-    margin-top: 34px;
-    /* 行高自己去量哦 */
+
+.main:hover #c2 {
+    transform: translateX(-50px) rotate(-30deg);
 }
- 
-.news_c .txt2 {
-    font-size: 12px;
-    color: #979797;
-    line-height: 25px;
-    margin-top: 15 px;
-    /* 行高自己去量哦 */
+
+.main:hover #c3 {
+    transform: translateX(0) rotate(-20deg);
 }
- 
-.news_r {
-    width: 180px;
-    height: 243px;
-    background: #fbfbfb url("../images/ma_05.jpg") no-repeat right bottom;
-    float: left;
-    padding: 0 38px 0 24px;
+
+.main:hover #c4 {
+    transform: translateX(50px) rotate(-10deg);
 }
- 
-.news_r .txt3 {
-    font-size: 12px;
-    color: #585858;
-    line-height: 24px;
-    margin: 21px 0 22px 0;
+
+#c1:hover {
+    transform: translateX(-150px) rotate(0deg) !important;
 }
- 
-.case_con {
-    height: 304px;
-    /* background: goldenrod; */
+
+#c2:hover {
+    transform: translateX(-100px) rotate(0deg) !important;
 }
- 
-.case_con h3 {
-    font-size: 18px;
-    color: #3f434f;
-    /* background: pink; */
-    padding: 28px 0 18px 22px;
+
+#c3:hover {
+    transform: translateX(-50px) rotate(0deg) !important;
 }
- 
-.case_con .case_box {
-    height: 240px;
-    /* background: orange; */
+
+#c4:hover {
+    transform: translateX(50px) rotate(0deg) !important;
 }
- 
-.case_box dl {
-    width: 210px;
-    /* 这是由图片尺寸为210得出的，这样文本就会屈居于一处 */
-    /* background: burlywood; */
-    float: left;
-    margin: 0 20px;
+
+.main {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    height: 50vmax;
+    place-items: center;
 }
- 
- 
-/* 这里很重要！一定要设置宽高，也就是图片尺寸得出，这样以后图片更换，结构就不会乱！ */
- 
-.case_box dl dt {
-    width: 210px;
-    height: 136px;
+
+/*
+美食
+ */
+#food {
+    display: flex;
 }
- 
-.case_box dl dd {
-    font-size: 12px;
-    color: #4f4f4f;
-    line-height: 24px;
-    margin-top: 13px;
+/* 左侧 */
+.food_cards {
+    perspective: 500px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    height: 50vmax;
+    place-items: center;
 }
- 
- 
-/* 上面给dt这个容器指定了宽高，现在让img跟随这个容器的宽高！！ */
- 
-.case_box dl dt img {
-    width: 100%;
-    height: 100%;
+
+.food_card {
+    width: 380px;
+    height: 508px;
+    background-image: url(../images/food.jpg);
+    background-size:cover;
+    border-radius: 4px;
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform .5s;
 }
- 
-#links {
-    background: #e5e5e5;
+
+.food_card:hover {
+    transform: translateZ(10px) rotateX(20deg) rotateY(20deg);
 }
- 
-.links_con {
-    height: 250px;
-    /*   */
+
+/* 右侧 */
+.food_text p {
+    color: gray;
 }
- 
-.links_con .links_title {
-    color: #5d5d5d;
-    line-height: 16px;
-    border-bottom: 1px solid #c1c1c1;
-    padding: 31px 0 11px 13px;
+
+.food_text h1 {
+    color: black;
 }
- 
-.links_con .links_l {
-    width: 452px;
-    height: 250px;
-    background: #e5e5e5;
-    float: left;
-    margin-left: 20px;
+
+.food_text h3 {
+    color: #fa65b1;
 }
- 
-.links_con .links_list {
-    /* background: cornsilk; */
-    height: 170px;
-    padding-left: 5px;
-    padding-top: 15px;
+
+.food_text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 50px;
 }
- 
-.links_con .links_list li {
-    width: 136px;
-    height: 24px;
-    background: url("../images/btn_img_13.jpg") no-repeat left center;
-    font-size: 12px;
-    line-height: 24px;
-    padding-left: 13px;
-    float: left;
+.food_btn {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #fa65b1;
+    border-radius: 24px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .3s ease;
 }
- 
-.links_con .links_list li a {
-    color: #5f5f5f;
+.food_btn:hover {
+    background-color: #fa65b1;
+    color: #fff;
 }
- 
-.links_con .links_c {
-    width: 153px;
-    height: 250px;
-    background: #e5e5e5;
-    float: left;
-    margin: 0 50px;
+
+/*
+美景
+ */
+#sights,
+#person{
+    display: flex;
 }
- 
-.links_con .links_c .links_list li {
-    width: 130px;
+/* 左侧 */
+.sights_text p {
+    color: gray;
 }
- 
-.links_con .links_r {
-    width: 256px;
-    height: 250px;
-    background: #e5e5e5;
-    float: left;
+
+.sights_text h1 {
+    color: black;
 }
- 
-.links_con .links_r .map {
+
+.sights_text h3 {
+    color: #00cc99;
+}
+.sights_text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 50px;
+}
+.sights_btn {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #00cc99;
+    border-radius: 24px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.sights_btn:hover {
+    background-color: #00cc99;
+    color: #fff;
+}
+/* 右侧 */
+.sights_cards {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    height: 50vmax;
+    place-items: center;
+}
+.sights_card {
+    box-sizing: border-box;
+    width: 380px;
+    height: 508px;
+    background-image: url(../images/sights.jpg);
+    background-size: cover;
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
     text-align: center;
-    padding-top: 11px;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.sights_card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.sights_card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+/*
+文化
+ */
+#culture {
+    display: flex;
+}
+/* 左侧 */
+.culture_cards {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    height: 50vmax;
+    place-items: center;
+}
+.culture_card {
+    box-sizing: border-box;
+    width: 380px;
+    height: 508px;
+    background-image: url(../images/culture.jpg);
+    background-size: cover;
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.culture_card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.culture_card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+/* 右侧 */
+.culture_text p {
+    color: gray;
+}
+
+.culture_text h1 {
+    color: black;
+}
+
+.culture_text h3 {
+    color: #ff9933;
+}
+.culture_text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 50px;
+}
+.culture_btn {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #ff9933;
+    border-radius: 24px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.culture_btn:hover {
+    background-color: #ff9933;
+    color: #fff;
+}
+
+/*
+个人介绍
+ */
+.self_card {
+    box-sizing: border-box;
+    width: 380px;
+    height: 508px;
+    background-image: url(../images/self_introduction.jpg);
+    background-size: cover;
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.self_card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.self_card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
 }
