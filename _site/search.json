@@ -1,6 +1,16 @@
 [
   
     {
+      "title"       : "本地视频",
+      "category"    : "",
+      "tags"        : "coding, Android",
+      "url"         : "./%E6%9C%AC%E5%9C%B0%E8%A7%86%E9%A2%91.html",
+      "date"        : "2023-10-05 03:32:20 +0800",
+      "description" : "一个基于谷歌Media3开发的开源本地视频播放软件，使用Material Design 3设计规范",
+      "content"     : "这是一个基于谷歌Media3开发的本地视频播放软件，使用Material Design 3设计规范，意在实现轻量，美观，实用。图片已实现功能 选择视频内置音轨和字幕轨道 手势调节（亮度，音量，进度） 按文件夹分类视频 检索本地视频 保存视频进度 批量管理视频 主页背景设置 温馨提醒 ……已知问题 双语字幕无法正常显示（多字幕轨道可以）"
+    } ,
+  
+    {
       "title"       : "Conway&#39;s Game of Life",
       "category"    : "",
       "tags"        : "coding, python",
