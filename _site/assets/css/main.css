@@ -823,7 +823,9 @@ svg.menu-icon-house {
   position: relative;
   list-style: none;
   float: left;
-  width: 50%;
+  width: 45%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .post-card {
@@ -853,15 +855,13 @@ svg.menu-icon-house {
   background: rgba(0, 0, 0, 0);
 }
 
-.post-card:hover .post-card-body{
-  background-color: #000000bf;
-}
 
 .post-card-body {
   position: absolute;
   left: 5%;
   bottom: 5%;
-  background-color: #00000099;
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(20px);
   padding-left: 5px;
   width: 95%
 }
@@ -881,7 +881,7 @@ svg.menu-icon-house {
 }
 .post-card-title-and-meta {
   margin:0;
-  color: white;
+  color: black;
   line-height: 1.2;
 }
 .post-card-link {
@@ -889,11 +889,11 @@ svg.menu-icon-house {
   font-family: var(--font2), sans-serif;
   font-weight: var(--font2-bold);
   text-transform: uppercase;
-  color: white;
+  color: black;
 }
 .post-card-link:hover {
   opacity: .75;
-  color: var(--grey4);
+  color: black;
 }
 
 /* = = = = = = = = = = Pagination  = = = = = = = = = = */
@@ -955,6 +955,9 @@ svg.menu-icon-house {
 }
 .footer-nav {
   display: flex;
+  color: var(--grey4);
+  font-size: 0.6em;
+  opacity: 0.75;
   }
 .footer-nav div {
   display: flex;
@@ -963,16 +966,6 @@ svg.menu-icon-house {
   text-align: center;
   align-items: center;
   justify-content: center;
-}
-.footer-nav a {
-  color: var(--grey4);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: var(--font2-bold);
-  font-family: var(--font2);
-}
-.footer-wrapper a:hover {
-  opacity: 0.6
 }
 @media (max-width:640px){
   .footer-wrapper {

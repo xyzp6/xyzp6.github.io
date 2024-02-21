@@ -5,8 +5,8 @@ show_date: true
 title:  本地视频 
 date:   2023-10-4 13:32:20 -0600
 description: 一个基于谷歌Media3开发的开源本地视频播放软件，使用Material Design 3设计规范
-img: posts/20231005/图标.png
-tags: [coding, Android]
+img: posts/movie/图标.png
+tags: [编程, Android]
 author: xyzp
 github: xyzp6/movie/
 ---
@@ -17,12 +17,12 @@ github: xyzp6/movie/
 
 ## 图片
 
-![首页](./assets/img/posts/20231005/首页.jpg)
-![历史记录](./assets/img/posts/20231005/历史记录.jpg)
-![设置](./assets/img/posts/20231005/设置.jpg)
-![横屏](./assets/img/posts/20231005/横屏.jpg)
-![播放页2](./assets/img/posts/20231005/播放页2.jpg)
-![播放页1](./assets/img/posts/20231005/播放页1.jpg)
+![首页](./assets/img/posts/movie/首页.jpg)
+![历史记录](./assets/img/posts/movie/历史记录.jpg)
+![设置](./assets/img/posts/movie/设置.jpg)
+![横屏](./assets/img/posts/movie/横屏.jpg)
+![播放页2](./assets/img/posts/movie/播放页2.jpg)
+![播放页1](./assets/img/posts/movie/播放页1.jpg)
 
 
 ## 已实现功能

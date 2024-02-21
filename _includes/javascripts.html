@@ -11,6 +11,25 @@
 {% assign night_mode = site.night_mode %}
 
 <script>
+    var s1 = '2024-02-16';
+    s1 = new Date(s1.replace(/-/g, "/"));
+    // 定义一个函数，用来计算和显示时间差
+    function showTimeDiff() {
+      s2 = new Date();
+      var diff = s2.getTime() - s1.getTime();
+      var number_of_days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      var number_of_hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var number_of_minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      var number_of_seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById('days').innerHTML = number_of_days;
+      document.getElementById('hours').innerHTML = number_of_hours;
+      document.getElementById('minutes').innerHTML = number_of_minutes;
+      document.getElementById('seconds').innerHTML = number_of_seconds;
+    }
+    // 调用一次函数，显示初始的时间差
+    showTimeDiff();
+    // 使用 setInterval 方法，每隔一秒钟调用一次函数，更新网页的内容
+    setInterval(showTimeDiff, 1000);
 (function() {
     var sw = document.getElementById('theme-switch');
     var html = document.getElementsByTagName('html')[0];
