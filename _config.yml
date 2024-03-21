@@ -1,6 +1,6 @@
 # Site settings
 title: xyzp
-description: 'Artificial Intelligence trends and concepts made easy.' # this means to ignore newlines until "baseurl:"
+description: '这是我的个人网站' # this means to ignore newlines until "baseurl:"
 permalink: ':title:output_ext'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://xyzp6.github.io" # the base hostname & protocol for your site, e.g. http://example.com
